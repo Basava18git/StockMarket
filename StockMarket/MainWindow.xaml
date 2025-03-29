@@ -4,10 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StockMarket"
+        
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="DarkBlue">
+        Title="MainWindow" Height="450" Width="800" Background="DarkBlue" >
     <Grid>
         <Button Content="Login" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="50" Click="Button_Click"/>
-        <TextBox Name="pwd_input"  Width="200"  Margin="0,-120,0,0" Height="35"  Background="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" TextChanged="pwd_input_TextChanged"  FontSize="25"/>
+        <TextBox Name="pwd_input"  Width="200"  Margin="0,-120,0,0" Height="35"  Background="Gray" VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="25"/>
     </Grid>
 </Window>

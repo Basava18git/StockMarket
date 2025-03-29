@@ -26,12 +26,8 @@ namespace StockMarket
         public StocksWindow()
         {
             InitializeComponent();
-         //   Symbol = symbol;
 
-            call();
-            // this.Close();
-
-            // closeWindow();
+            call(); 
             
         }
 

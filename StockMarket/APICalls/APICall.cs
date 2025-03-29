@@ -11,7 +11,7 @@ namespace StockMarket.APICalls
 {
     class APICall
     {
-
+        #region APIRequest
         public async Task<StockInfo> GetStockPrice(String symbol)
         {
             string apiKey = "U2U2W992LP02GP0C";
@@ -35,12 +35,9 @@ namespace StockMarket.APICalls
                     return null;
                 }
 
-            }
-
-        
-        
+            }        
         }
-
+        #endregion
 
     }
 }

@@ -8,11 +8,10 @@ namespace StockMarket
 {
     class StockInfo
     {
+        #region Properties
         public string price { get; set; }
         public string lastprice { get; set; }
-
         public string symbol { get; set; }
-
-
+        #endregion
     }
 }
