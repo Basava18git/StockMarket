@@ -28,55 +28,75 @@ namespace StockMarket
         {
             InitializeComponent();
             pwd_input.Focus();
-            
+           // mainContent.Content = new Views.CashFlowUI();
+
+
         }
 
-        private  void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
-            StocksWindow stocksWindow = new StocksWindow();
+            //StocksWindow stocksWindow = new StocksWindow();
             try
             {
-                if (pwd_input.Text == "9945706254")
+
+                if(pwd_input.Text == "")
                 {
-                    MessageBox.Show("Login Successful");
-
-                    
-                    stocksWindow.ShowDialog();
-                    try
+                    if (MessageBox.Show("Do You want to enter Password again?", "Empty Password", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
                     {
-                        if (!stocksWindow.IsActive)
-                        {
-                            Application.Current.Shutdown();
-                        }
-
-                    }
-
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
+                        pwd_input.Focus();
                     }
                     
-
                 }
                 else
                 {
-                    if(MessageBox.Show("Do You want to try Again?", "Invalid Password", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+                    if (pwd_input.Text == "9945706254")
                     {
-                            pwd_input.Clear();
-                            pwd_input.Focus();
+                        //MessageBox.Show("Login Successful");
+                        //mainWindow.Hide();
+
+                        //stocksWindow.ShowDialog();
+
+                        //try
+                        //{
+                        //    if (!stocksWindow.IsActive)
+                        //    {
+                        //        Application.Current.Shutdown();
+                        //    }
+
+                        //}
+
+                        //catch (Exception ex)
+                        //{
+                        //    MessageBox.Show(ex.Message);
+                        //}
+                        
+                        mainContent.Content = new Views.StocksPage();
+                        mainWindow.Close();
+                        
+                        //this.Hide();
+                       
+                        
+
                     }
                     else
                     {
-                        Application.Current.Shutdown();
+                        if (MessageBox.Show("Do You want to try Again?", "Invalid Password", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+                        {
+                            pwd_input.Clear();
+                            pwd_input.Focus();
+                        }
                     }
-
                 }
+               //
+
             }
+             
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            
         }
 
     }

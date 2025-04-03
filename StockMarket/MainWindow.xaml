@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:StockMarket"
         
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="DarkBlue" >
+        Title="MainWindow" Height="450" Width="800" Background="AntiqueWhite" >
     <Grid>
-        <Button Content="Login" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="50" Click="Button_Click"/>
-        <TextBox Name="pwd_input"  Width="200"  Margin="0,-120,0,0" Height="35"  Background="Gray" VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="25"/>
+        <Button Content="Login" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="50" Click="Button_Click" Margin="0,70,0,0"/>
+        <TextBox Name="pwd_input"  Width="200"  Margin="0,-50,0,0" Height="35"  Background="Gray" VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="25"/>
+        <Image Source="D:\C#_Projects\StockMarket\StockMarket\Images\USER.jpeg" Width="100" Height="100" Margin="0,-250,0,0" RenderTransformOrigin="17.538,1.428"/>
+        <Label Content="Basava Devargudi" Width="150" Height="25" Margin="0,-120,0,0" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <ContentControl x:Name="mainContent" />
     </Grid>
 </Window>
